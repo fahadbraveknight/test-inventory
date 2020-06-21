@@ -51,7 +51,6 @@ const processTransaction = (params) => {
                         const hasDiscount = inventory === passportCountry;
                         const defaultShipingCost = 400;
                         let shippingCost = hasDiscount ? defaultShipingCost - defaultShipingCost * 0.2 : defaultShipingCost;
-                        console.log(shippingCost)
                         inventoryPrice = shippingCost + inventoryPrice;
                     }
 
@@ -118,7 +117,6 @@ const init = () => {
             qty : Number(input[i + 1]),
         })
     }
-    console.log(items, purchaseCountry, passportCountry)
 
     processTransaction({
         purchaseCountry,
